@@ -16,7 +16,7 @@ class FoodListView(APIView):
             )
         ).filter(food__is_publish=True).distinct()
 
-        # Сериализуем данные.q
+        # Сериализуем данные.
         serializer = FoodListSerializer(categories, many=True)
 
         # Возвращаем JSON-ответ
